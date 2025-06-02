@@ -1,7 +1,7 @@
 # Brute Force
 class Solution1:
     '''
-    TC: O(2n) = O(n)
+    TC: O(2n) = O(n) ~~ Two comparisons at each place
     AS: O(1)
     '''
     def getMinMax(self, nums):
@@ -30,7 +30,7 @@ x.getMinMax(nums2)
 ## This solutions needs to account for ---->>> both EVEN and ODD number of LIST
 class Solution2:
     '''
-    TC: O(3/2*n) = O(1.5n) = O(n)
+    TC: O(3/2*n) = O(1.5n) = O(n) ~~ 3 comparisons * (n/2 :as we pairs ) = 3n/2 
     AS: O(1)
     '''
     def getMinMax(self, nums):
