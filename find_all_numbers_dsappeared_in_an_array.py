@@ -24,15 +24,25 @@ class Solution2:
         TC: O(nlogn) 
         AS: O(1)
         '''
+        nums.sort() # sort in-place to maintain O(1) extra space
         n = len(nums)
-        nums = sorted(nums)
         result = []
         idx = 1
-        for i in range(0, n):
+        i = 0
+        while idx <= n and i < n:
             if idx != nums[i]:
+                i += 1
                 idx += 1
-                if idx != nums[i]:
-                    result.append(idx)
+            elif nums[i] < idx:
+                i += 1
+            else:
+                result.append(idx)
+                idx += 1
+
+        while idx <= n:
+            result.append(idx)
+            idx += 1
+            
         return result
     
 nums = [4,3,3,2,2,7,8,2,3,1]        
@@ -82,8 +92,8 @@ class Solution4:
 
         return result
 
-
-nums = [4,3,2,7,8,2,3,1]        
-s = Solution4()
-print(s.findDisappearedNumbers(nums))
-  
+if __name__ == '__main__':
+    nums = [4,3,2,7,8,2,3,1]        
+    s = Solution4()
+    print(s.findDisappearedNumbers(nums))
+    

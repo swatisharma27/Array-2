@@ -62,10 +62,11 @@ class Solution2:
         print(f"Minimum element is: {minElmnt}")
         print(f"Maximum element is: {maxElmnt}")
         
-y = Solution2()
+if __name__ == '__main__':
+    y = Solution2()
 
-nums1 = [3, 5, 4, 1, 9]
-y.getMinMax(nums1)
+    nums1 = [3, 5, 4, 1, 9]
+    y.getMinMax(nums1)
 
-nums2 = [22, 14, 8, 17, 35, 3]
-y.getMinMax(nums2)
+    nums2 = [22, 14, 8, 17, 35, 3]
+    y.getMinMax(nums2)
